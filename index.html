@@ -443,7 +443,7 @@
         <strong class="title">Залиште свої дані, ми вам передзвонимо</strong>
 
         <!-- Order form -->
-        <form class="order-form" name="order_form">
+        <form class="order-form" name="order_form" autocomplete="off">
           <div class="text-input-group">
             <!-- Name -->
             <label class="text-input">
@@ -452,7 +452,6 @@
                 class="text-field text-input-field"
                 type="text"
                 name="customer_name"
-                id="customer-name"
                 placeholder="Jhon Dow"
                 required
               />
@@ -464,7 +463,7 @@
             <!-- Phone -->
             <label class="text-input">
               <span class="text-input-label">Телефон</span>
-              <input class="text-field text-input-field" type="tel" name="customer_phone" id="phone" required />
+              <input class="text-field text-input-field" type="tel" name="customer_phone" required />
               <svg class="text-input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-modal-phone"></use>
               </svg>
@@ -477,7 +476,6 @@
                 class="text-field text-input-field"
                 type="email"
                 name="customer_email"
-                id="customer-email"
                 placeholder="JhonDow@email.com"
                 required
               />
@@ -492,7 +490,6 @@
               <textarea
                 class="text-field text-area-field"
                 name="customer_comment"
-                id="customer-comment"
                 placeholder="Введіть текст"
               ></textarea>
             </label>
@@ -500,12 +497,18 @@
 
           <!-- Terms -->
           <label class="agreement">
-            <input type="checkbox" name="agreement_checkbox" id="agreement-checkbox" required />
+            <input class="agreement-checkbox" type="checkbox" name="agreement_checkbox" required />
+            <!-- <div class="check-box"> -->
+            <!-- <svg class="icon icon-check-mark">
+                <use href="./images/icons.svg#icon-check-mark"></use>
+              </svg> -->
+            <!-- </div> -->
             <span>
               Погоджуюся з розсилкою та приймаю
-              <a class="terms-link" href="">Умови договору</a>
+              <a class="link terms-link" href="">Умови договору</a>
             </span>
           </label>
+
           <button class="btn primary" type="submit">Відправити</button>
         </form>
       </div>
