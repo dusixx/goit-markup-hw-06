@@ -7,6 +7,12 @@
 
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", resetOrderForm);
+
+  function resetOrderForm() {
+    const { orderForm } = document.forms;
+    orderForm.reset();
+  }
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");

@@ -70,13 +70,37 @@
           <h1 class="visually-hidden">Реалізовані проекти</h1>
 
           <!-- Filters -->
-
-          <ul class="filter-list">
-            <li><button class="btn secondary" type="button">Усі</button></li>
-            <li><button class="btn secondary" type="button">Веб-сайти</button></li>
-            <li><button class="btn secondary" type="button">Додатки</button></li>
-            <li><button class="btn secondary" type="button">Дизайн</button></li>
-            <li><button class="btn secondary" type="button">Маркетинг</button></li>
+          <ul class="list filter-list" role="group">
+            <li>
+              <label class="filter-item">
+                <input class="filter-check visually-hidden all" type="checkbox" name="filter" value="all" />
+                <span class="filter-label btn secondary">Усі</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter-item">
+                <input class="filter-check visually-hidden" type="checkbox" name="filter" value="website" />
+                <span class="filter-label btn secondary">Веб-сайти</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter-item">
+                <input class="filter-check visually-hidden" type="checkbox" name="filter" value="app" />
+                <span class="filter-label btn secondary">Додатки</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter-item">
+                <input class="filter-check visually-hidden" type="checkbox" name="filter" value="design" />
+                <span class="filter-label btn secondary">Дизайн</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter-item">
+                <input class="filter-check visually-hidden" type="checkbox" name="filter" value="marketing" />
+                <span class="filter-label btn secondary">Маркетинг</span>
+              </label>
+            </li>
           </ul>
 
           <!-- Projects -->
@@ -290,9 +314,10 @@
             </ul>
           </address>
         </div>
+
         <!-- Socials -->
         <div class="follow">
-          <b class="follow-title">Приєднуйтесь</b>
+          <b class="title">Приєднуйтесь</b>
           <ul class="list socials">
             <li>
               <a class="link socials-link" href="" aria-label="Instagram icon">
@@ -323,6 +348,21 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <!-- Subscribe-->
+
+        <div class="subscribe">
+          <b class="title">Підпишіться на розсилку</b>
+          <form class="subscribe-form">
+            <input class="form-text-input" type="email" name="subscriber_email" placeholder="E-mail" />
+            <button class="btn-subscribe btn primary" type="submit">
+              Підписатися
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

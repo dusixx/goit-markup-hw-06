@@ -398,9 +398,10 @@
             </ul>
           </address>
         </div>
+
         <!-- Socials -->
         <div class="follow">
-          <b class="follow-title">Приєднуйтесь</b>
+          <b class="title">Приєднуйтесь</b>
           <ul class="list socials">
             <li>
               <a class="link socials-link" href="" aria-label="Instagram icon">
@@ -432,6 +433,21 @@
             </li>
           </ul>
         </div>
+
+        <!-- Subscribe-->
+
+        <div class="subscribe">
+          <b class="title">Підпишіться на розсилку</b>
+          <form class="subscribe-form">
+            <input class="form-text-input" type="email" name="subscriber_email" placeholder="E-mail" required />
+            <button class="btn-subscribe btn primary" type="submit">
+              Підписатися
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -440,70 +456,100 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn btn-close" type="button" data-modal-close>&times;</button>
-        <strong class="title">Залиште свої дані, ми вам передзвонимо</strong>
+        <b class="title">Залиште свої дані, ми вам передзвонимо</b>
 
         <!-- Order form -->
-        <form class="order-form" name="order_form" autocomplete="off">
-          <div class="text-input-group">
+        <form class="order-form" name="orderForm" autocomplete="off">
+          <div class="form-text-fields">
             <!-- Name -->
-            <label class="text-input">
-              <span class="text-input-label">Ім'я</span>
-              <input
-                class="text-field text-input-field"
-                type="text"
-                name="customer_name"
-                placeholder="Jhon Dow"
-                required
-              />
-              <svg class="text-input-icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-modal-person"></use>
-              </svg>
+            <label class="form-field required">
+              <span class="form-label">Ім'я</span>
+              <div class="form-text-input-wrapper">
+                <input
+                  class="form-text-input with-notice"
+                  type="text"
+                  name="customer_name"
+                  placeholder="Jhon Dow"
+                  pattern="^([A-Z][a-z]+\s+[A-Z][a-z]+)|([\u0400-\u042f][\u0430-\u044f]+\s+[\u0400-\u042f][\u0430-\u044f]+)$"
+                  required
+                />
+                <!-- Field icon -->
+                <svg class="form-field-icon" width="18" height="18">
+                  <use href="./images/icons.svg#form-icon-person"></use>
+                </svg>
+                <!-- Notice icon -->
+                <svg class="form-field-icon-notice" width="18" height="18">
+                  <use class="valid" href="./images/icons.svg#form-icon-valid"></use>
+                  <use class="invalid" href="./images/icons.svg#form-icon-invalid"></use>
+                </svg>
+              </div>
             </label>
 
             <!-- Phone -->
-            <label class="text-input">
-              <span class="text-input-label">Телефон</span>
-              <input class="text-field text-input-field" type="tel" name="customer_phone" required />
-              <svg class="text-input-icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-modal-phone"></use>
-              </svg>
+            <label class="form-field required">
+              <span class="form-label">Телефон</span>
+              <div class="form-text-input-wrapper">
+                <input
+                  class="form-text-input with-notice"
+                  type="tel"
+                  name="customer_phone"
+                  placeholder="+0380991234567"
+                  required
+                  pattern="^\+\d{12,}$"
+                />
+                <!-- Field icon -->
+                <svg class="form-field-icon" width="18" height="18">
+                  <use href="./images/icons.svg#form-icon-phone"></use>
+                </svg>
+                <!-- Notice icon -->
+                <svg class="form-field-icon-notice" width="18" height="18">
+                  <use class="valid" href="./images/icons.svg#form-icon-valid"></use>
+                  <use class="invalid" href="./images/icons.svg#form-icon-invalid"></use>
+                </svg>
+              </div>
             </label>
 
             <!-- Email -->
-            <label class="text-input">
-              <span class="text-input-label">Пошта</span>
-              <input
-                class="text-field text-input-field"
-                type="email"
-                name="customer_email"
-                placeholder="JhonDow@email.com"
-                required
-              />
-              <svg class="text-input-icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-modal-email"></use>
-              </svg>
+            <label class="form-field">
+              <span class="form-label">Пошта</span>
+              <div class="form-text-input-wrapper">
+                <input
+                  class="form-text-input with-notice"
+                  type="email"
+                  name="customer_email"
+                  placeholder="JhonDow@email.com"
+                />
+                <!-- Field icon -->
+                <svg class="form-field-icon" width="18" height="18">
+                  <use href="./images/icons.svg#form-icon-email"></use>
+                </svg>
+                <!-- Notice icon-->
+                <svg class="form-field-icon-notice" width="18" height="18">
+                  <use class="valid" href="./images/icons.svg#form-icon-valid"></use>
+                  <use class="invalid" href="./images/icons.svg#form-icon-invalid"></use>
+                </svg>
+              </div>
             </label>
 
             <!-- Comment -->
-            <label class="text-input">
-              <span class="text-input-label">Коментар</span>
+            <label class="form-field">
+              <span class="form-label">Коментар</span>
               <textarea
-                class="text-field text-area-field"
+                class="form-text-input multiline"
                 name="customer_comment"
                 placeholder="Введіть текст"
               ></textarea>
             </label>
           </div>
 
-          <!-- Terms -->
+          <!-- Agreement -->
           <label class="agreement">
-            <input class="agreement-checkbox" type="checkbox" name="agreement_checkbox" required />
-            <!-- <div class="check-box"> -->
-            <!-- <svg class="icon icon-check-mark">
-                <use href="./images/icons.svg#icon-check-mark"></use>
-              </svg> -->
-            <!-- </div> -->
-            <span>
+            <input class="checkbox visually-hidden" type="checkbox" name="agreement_check" required />
+            <span class="checkbox-label">
+              <svg class="checkbox-icon" width="16" height="15">
+                <use class="unchecked" href="./images/icons.svg#icon-uncheck"></use>
+                <use class="checked" href="./images//icons.svg#icon-check"></use>
+              </svg>
               Погоджуюся з розсилкою та приймаю
               <a class="link terms-link" href="">Умови договору</a>
             </span>
