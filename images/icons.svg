@@ -222,5 +222,18 @@
         style="fill: var(--color2, #fff)"
       />
     </symbol>
+    <symbol id="icon-check-mark-only" viewBox="0 0 42 32">
+      <path
+        stroke-width=".64"
+        d="m6.263 15.205-.22-.21-3.307 3.132 11.651 11.114L38.864 5.89l-3.285-3.134-21.192 20.197-8.124-7.75z"
+      />
+    </symbol>
+
+    <symbol id="icon-check-mark-transp-bg" viewBox="0 0 34 32">
+      <path
+        stroke-width=".427"
+        d="m8.442 16.537-.147-.14-2.205 2.088 7.767 7.41 16.318-15.567-2.19-2.089-14.128 13.465-5.416-5.167z"
+      />
+    </symbol>
   </defs>
 </svg>
