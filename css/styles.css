@@ -958,8 +958,6 @@ body {
 
 /* #endregion Notice*/
 
-/* #region Custom checkbox */
-
 .order-form-agreement {
   display: block;
   margin-bottom: 30px;
@@ -976,6 +974,8 @@ body {
   cursor: pointer;
   user-select: none;
 }
+
+/* #region Custom checkbox */
 
 .order-form-agreement .checkbox-label::before {
   content: "";
@@ -1006,6 +1006,32 @@ body {
   background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
 }
+
+/* .order-form-agreement .checkbox-icon {
+  margin-right: 8px;
+  transition: box-shadow var(--transition-prim-params);
+}
+
+.order-form-agreement .checkbox-icon :nth-child(n) {
+  transition: opacity var(--transition-prim-params);
+}
+
+.order-form-agreement .checkbox-icon .checked {
+  opacity: 0;
+}
+
+.order-form-agreement .checkbox:checked + .checkbox-label .unchecked {
+  opacity: 0;
+}
+
+.order-form-agreement .checkbox:checked + .checkbox-label .checked {
+  opacity: 1;
+}
+
+/* (!)углы не скруглены */
+/* .order-form-agreement .checkbox:focus-visible + .checkbox-label .checkbox-icon {
+  box-shadow: 0 0 0 3px rgb(33, 150, 243, 0.5);
+} */
 
 /* #endregion Custom checkbox*/
 
