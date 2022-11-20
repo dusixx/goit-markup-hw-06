@@ -522,10 +522,6 @@ body {
   box-shadow: 0 0 0 2px var(--dark-grey-sec-color);
 }
 
-/* .works .filter-check:checked:active + .filter-label {
-  background-color: #;
-} */
-
 /* #endregion */
 
 /* #region Overlay desc */
@@ -877,7 +873,6 @@ body {
 .order-form .form-field:focus-within .form-field-icon,
 .order-form .form-field:hover .form-field-icon {
   fill: var(--accent-color);
-  cursor: text;
 }
 
 .order-form .form-label {
@@ -895,18 +890,21 @@ body {
   top: 50%;
   transform: translateY(-50%);
 
+  cursor: text;
+
   fill: var(--dark-grey-sec-color);
   transition: fill var(--transition-prim-params);
 }
 
 .order-form .form-text-input.multiline {
+  display: block;
   padding: 12px 16px;
   height: 120px;
 
   resize: none;
 }
 
-.order-form .btn.primary {
+.order-form-btn {
   margin: 0 auto;
   min-width: 200px;
 }
@@ -958,15 +956,19 @@ body {
   fill: var(--warn-color);
 }
 
-/* #endregion */
+/* #endregion Notice*/
 
-/* #region Agreement check */
+/* #region Custom checkbox */
 
-.order-form .agreement {
+.order-form-agreement {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.order-form-agreement .checkbox-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -975,11 +977,10 @@ body {
   user-select: none;
 }
 
-/* #region Custom checkbox */
+.order-form-agreement .checkbox-label::before {
+  content: "";
 
-.agreement .checkbox {
-  appearance: none;
-
+  display: block;
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -987,27 +988,32 @@ body {
   outline: unset;
   border: 2px solid var(--dark-grey-sec-color);
   border-radius: 2px;
+
   transition: border-color var(--transition-prim-params), background-color var(--transition-prim-params),
     box-shadow var(--transition-prim-params);
 }
 
-.agreement .checkbox:focus-visible {
-  box-shadow: 0 0 0 3px rgb(33, 150, 243, 0.3);
+.order-form-agreement .checkbox:focus-visible + .checkbox-label::before {
+  box-shadow: 0 0 0 3px rgb(33, 150, 243, 0.5);
 }
 
-.agreement .checkbox:checked {
+.order-form-agreement .checkbox:checked + .checkbox-label::before {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
 }
 
-/* #endregion */
+/* #endregion Custom checkbox*/
+
+/* #region Animated terms link */
 
 .order-form .terms-link {
   position: relative;
+  margin-left: 3px;
   color: var(--accent-color);
 }
 
@@ -1016,7 +1022,7 @@ body {
 
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: 4px;
 
   display: block;
   width: 100%;
@@ -1032,6 +1038,8 @@ body {
   transform: scaleX(0);
 }
 
-/* #endregion */
+/* #endregion Animated terms link*/
 
-/* #endregion */
+/* #endregion Order form*/
+
+/* #endregion Modal*/
